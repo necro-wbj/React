@@ -1,0 +1,19 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Anaconda",
+		"Babel Snippets",
+		"ChineseLocalizations",
+		"ConvertToUTF8",
+		"Emmet",
+		"Package Control",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-contrib-eslint_d",
+		"SublimeREPL"
+	]
+}

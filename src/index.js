@@ -8,7 +8,9 @@ class ShopItem extends React.Component {
 	render() {
 		return (
 			<tr>
-				<td>{this.props.value}</td>
+				<td>{this.props.value.id}</td>
+				<td>{this.props.value.prod}</td>
+				<td>{this.props.value.price}</td>
 				<td><button onClick={this.clickDel.bind(this)}>刪除</button></td>
 			</tr>
 		)
@@ -19,10 +21,14 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			items: ['hhjshsh','issfd','aaaa','boXXXXok'],
+			items: [],
 			sample: ''
 		};
 		this.testClick = this.testClick.bind(this);
+	}
+
+	componentDidMount(){
+		fetch("/0503/list.php").then(res => res.json()).then(res =>{this.setState({items:res})})
 	}
 	
 	testClick() {
